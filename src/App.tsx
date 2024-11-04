@@ -6,12 +6,16 @@ import Header from "./components/header";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <div className="min-h-screen bg-gray px-4 md:px-8 lg:px-12 xl:px-14 py-[32px] ">
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+
+      </div>
+
     </BrowserRouter>
   );
 };
