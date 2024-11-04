@@ -1,8 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import Detail from "./pages/detail";
+import Header from "./components/header";
 
 const App = () => {
   return (
-    <div className="text-3xl underline">selam</div>
-  )
-}
+    <BrowserRouter>
+      <Header />
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
