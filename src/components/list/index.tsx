@@ -12,7 +12,7 @@ const List = () => {
     });
     console.log(data)
     return (
-        <div>
+        <div className="col-span-4 lg:col-span-3">
             {isLoading ? (
                 <Loader />
             ) : error ? (
