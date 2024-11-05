@@ -17,6 +17,17 @@ const Filter = ({ isOpen, close }: Props) => {
     const [color, setColor] = useState<string[]>(params.get("color")?.split(",") || [])
 
     const [gender, setGender] = useState<string>(params.get("gender") || " ")
+    const [price, setPrice] = useState<string>(params.get("price") || "0")
+
+    const handleReset = () => {
+        setColor([]);
+        setSize([]);
+        setGender("");
+        setPrice("0")
+
+        setParams({})
+
+    }
 
     return (
 
@@ -30,9 +41,9 @@ const Filter = ({ isOpen, close }: Props) => {
                     <Size selected={size} setSelected={setSize} />
                     <Color selected={color} setSelected={setColor} />
                     <Gender selected={gender} setSelected={setGender} />
-                    <Price />
+                    <Price selected={price} setSelected={setPrice} />
 
-                    <button type="reset" className="border border-gray-dark p-2 rounded-lg hover:bg-gray-dark hover:text-white transition" >Sıfırla</button>
+                    <button onClick={handleReset} type="reset" className="border border-gray-dark p-2 rounded-lg hover:bg-gray-dark hover:text-white transition" >Sıfırla</button>
                 </form>
             </div>
 

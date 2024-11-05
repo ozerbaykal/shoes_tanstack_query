@@ -38,7 +38,7 @@ const Size = ({ selected, setSelected }: FilterProps) => {
 
     return (
         <div className="lg:mt-5 ">
-            <h2 className="mb-4">Numara</h2>
+            <h2 className="mb-4 font-semibold">Numara</h2>
 
             <div className="grid grid-cols-5 gap-4">
 
