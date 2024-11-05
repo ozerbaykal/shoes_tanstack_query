@@ -7,8 +7,9 @@ const Hero = () => {
                     Sadece Geçerli Süre
                 </p>
                 <h1 className="text-[20px] sm:text[25px] md:text-[30px] lg:text-[50px] xl:text-[74px] font-semibold text-white">%30 indirim</h1>
-                <p className="font-open text-[10px] sm:text-[12] md:text-[14px] lg:text-[18px] xl:text-[20px] text-gray">
-                    Sneakers made with your comfort in mind so you can put all of your focus into your next session
+                <p className="font-open text-[10px] sm:text-[12] md:text-[14px] lg:text-[18px] xl:text-[20px] text-gray max-w-[60%]">
+
+                    Konforunuz düşünülerek tasarlanmış spor ayakkabılar, böylece tüm dikkatinizi bir sonraki antrenmanınıza verebilirsiniz.
                 </p>
 
             </div>
