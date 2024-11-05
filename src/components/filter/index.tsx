@@ -2,6 +2,7 @@ import Color from "./color"
 import Gender from "./gender"
 import Size from "./size"
 import Price from "./price"
+import { useState } from "react"
 
 type Props = {
     isOpen: boolean,
@@ -9,6 +10,8 @@ type Props = {
 }
 
 const Filter = ({ isOpen, close }: Props) => {
+    const [size, setSize] = useState<string[]>([])
+    const [color, setColor] = useState<string[]>([])
 
     return (
 
@@ -16,11 +19,11 @@ const Filter = ({ isOpen, close }: Props) => {
             <div className="max-lg:max-w-lg max-lg:mx-auto max-lg:h-[80vh] max-lg:min-w-[350px]">
                 <div className="max-lg:bg-white max-lg:flex max-lg:justify-between max-lg:p-4 rounded-t-md">
                     <h2 className="text-xl font-semibold">Fİltreler</h2>
-                    <button className="lg:hidden">X</button>
+                    <button onClick={close} className="lg:hidden">X</button>
                 </div>
-                <form className="bg-gray h-full flex flex-col gap-6 rounded-b-md" >
-                    <Size />
-                    <Color />
+                <form className="bg-gray h-full flex flex-col gap-6 rounded-b-md max-lg:p-5" >
+                    <Size selected={size} setSelected={setSize} />
+                    <Color selected={color} setSelected={setColor} />
                     <Gender />
                     <Price />
 
