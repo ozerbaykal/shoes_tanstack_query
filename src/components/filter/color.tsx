@@ -12,10 +12,10 @@ const Color = ({ selected, setSelected }: FilterProps) => {
     useEffect(() => {
         if (selected.length > 0) {
             //seçili elemaları url e ekle(,koy)
-            params.set("size", selected.join(","))
+            params.set("color", selected.join(","))
         } else {
             //seçili numara yoksa parametreyi kaldır
-            params.delete("size")
+            params.delete("color")
         }
         setParams(params)
     }, [selected])

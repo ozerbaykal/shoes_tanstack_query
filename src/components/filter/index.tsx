@@ -3,6 +3,7 @@ import Gender from "./gender"
 import Size from "./size"
 import Price from "./price"
 import { useState } from "react"
+import { useSearchParams } from "react-router-dom"
 
 type Props = {
     isOpen: boolean,
@@ -10,8 +11,12 @@ type Props = {
 }
 
 const Filter = ({ isOpen, close }: Props) => {
-    const [size, setSize] = useState<string[]>([])
-    const [color, setColor] = useState<string[]>([])
+    const [params, setParams] = useSearchParams()
+
+    const [size, setSize] = useState<string[]>(params.get("size")?.split(",") || [])
+    const [color, setColor] = useState<string[]>(params.get("color")?.split(",") || [])
+
+    const [gender, setGender] = useState<string>(params.get("gender") || " ")
 
     return (
 
@@ -24,7 +29,7 @@ const Filter = ({ isOpen, close }: Props) => {
                 <form className="bg-gray h-full flex flex-col gap-6 rounded-b-md max-lg:p-5" >
                     <Size selected={size} setSelected={setSize} />
                     <Color selected={color} setSelected={setColor} />
-                    <Gender />
+                    <Gender selected={gender} setSelected={setGender} />
                     <Price />
 
                     <button type="reset" className="border border-gray-dark p-2 rounded-lg hover:bg-gray-dark hover:text-white transition" >Sıfırla</button>
