@@ -1,7 +1,10 @@
+import Hero from "./Hero"
 
 const Home = () => {
     return (
-        <div className="bg-mavi">Home</div>
+        <div >
+            <Hero />
+        </div>
     )
 }
 
