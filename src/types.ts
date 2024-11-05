@@ -5,7 +5,7 @@ export type Shoe = {
 
     description: string
     isNew: boolean,
-    discount: boolean,
+    discount: number,
     size: string,
     color: string,
     gender: string,
