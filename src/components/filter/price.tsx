@@ -1,12 +1,14 @@
 import { useEffect } from "react"
 import { GenderProps } from "./gender"
 import { useSearchParams } from "react-router-dom"
+import { useDebounce } from "@uidotdev/usehooks"
 
 const Price = ({ selected, setSelected }: GenderProps) => {
     const [params, setParams] = useSearchParams()
+    const debouncedValue = useDebounce(selected, 300)
     useEffect(() => {
         if (Number(selected) > 0) {
-            params.set("price", selected)
+            params.set("price", debouncedValue)
         } else {
             params.delete("price")
         }

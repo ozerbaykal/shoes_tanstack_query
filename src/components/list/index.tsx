@@ -5,21 +5,25 @@ import Loader from "../loader";
 import Card from "./Card";
 import { Shoe } from "../../types";
 import { useSearchParams } from "react-router-dom";
+import formatParams from "../../utils/formatParams";
 
 const List = () => {
     //url 'deki bütün arama parametrelerini al
-
-
     const [params] = useSearchParams();
+
+    //patametreleri nesneye çevir 
     const paramsObj = Object.fromEntries(params.entries())
 
-    console.log(paramsObj)
+    //girilen parametreyi url 'ye çeviren fonksiyon
+    const paramsStr = formatParams(paramsObj)
+
+
 
 
 
     const { isLoading, error, data } = useQuery<Shoe[]>({
-        queryKey: ["shoes"],
-        queryFn: () => getShoes(),
+        queryKey: ["shoes", paramsStr],
+        queryFn: () => getShoes(paramsStr),
     });
 
     return (

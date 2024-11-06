@@ -9,16 +9,9 @@ const api = axios.create({
 const urlParams = {
     color: "blue,light-gray",
     gender: "men",
-
     price: "371",
-
     size: "40,41",
 };
-
-const urll = formatParams(urlParams)
-
-
-
 
 //api'a gönderilecek parametre stringi bu şekilde
 
@@ -29,4 +22,4 @@ const url =
 
 
 //bütün ayakkabı verilerini alan fon
-export const getShoes = () => api.get("/shoes").then((res) => res.data);
+export const getShoes = (params: string) => api.get(`/shoes${params}`).then((res) => res.data);
