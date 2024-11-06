@@ -15,7 +15,7 @@ const Head = ({ data }: DetailProps) => {
     return (
         <div>
             <Badge discount={data.discount} />
-            <h1 className="font-semibold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[55px]mt-[60px]"> {data.name}
+            <h1 className="font-semibold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[55px] mt-[60px]"> {data.name}
             </h1>
 
             <p className="text-[24px] mt-4 ">

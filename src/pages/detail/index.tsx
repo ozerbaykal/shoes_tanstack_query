@@ -8,6 +8,7 @@ import Picture from "./picture"
 import Head from "./Head"
 import Color from "./Color"
 import Size from "./Size"
+import Foot from "./Foot"
 
 const Detail = () => {
     const { id } = useParams()
@@ -39,6 +40,7 @@ const Detail = () => {
                 <Head data={data} />
                 <Color data={data} />
                 <Size data={data} />
+                <Foot data={data} />
 
             </div>
 
