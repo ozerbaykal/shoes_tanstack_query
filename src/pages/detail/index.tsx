@@ -28,7 +28,7 @@ const Detail = () => {
 
 
     return (
-        <section className="mt-8 grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4">
+        <section className="mt-8 grid grid-cols md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-4">
 
             <Picture data={data.picture} />
 
