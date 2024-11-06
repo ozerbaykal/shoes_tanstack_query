@@ -15,7 +15,7 @@ const Header = () => {
 
             <Link className="w-[16%] max-w-[1280px] max-h-[32px] h-[20px]" to={"/"} >
 
-                <img className="w-full h-full" src="logo.svg " />
+                <img className="w-full h-full" src="logo.svg" />
 
 
             </Link>

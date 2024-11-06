@@ -1,5 +1,4 @@
 import axios from "axios";
-import formatParams from "../utils/formatParams";
 
 const api = axios.create({
     baseURL: "http://localhost:3050",
@@ -23,3 +22,8 @@ const url =
 
 //bütün ayakkabı verilerini alan fon
 export const getShoes = (params: string) => api.get(`/shoes${params}`).then((res) => res.data);
+
+//tek bir ayakkabıyı al
+export const getShoe = (id: string) => api.get(`/shoes/
+${id}`).then((res) => res.data);
+
