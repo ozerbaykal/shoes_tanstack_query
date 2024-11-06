@@ -10,8 +10,6 @@ This project is a responsive, user-friendly web application for managing and dis
 
 ![](./public/image/screenrecordshoes.gif)
 
-## Screenshots
-
 ### Home Page
 
 ![](./public/image/homepage.png)
@@ -26,7 +24,7 @@ This project is a responsive, user-friendly web application for managing and dis
 
 ## Features
 
--- Home Page: Users can filter products by size, color, and price.
+- Home Page: Users can filter products by size, color, and price.
 
 - Detail Page: Users can check stock availability for specific sizes; only sizes in stock are displayed.
 - Responsive Design: The application is optimized for all screen sizes.
@@ -34,7 +32,7 @@ This project is a responsive, user-friendly web application for managing and dis
 
 ## Technologies Used
 
-- - React: Frontend framework for building UI components
+- React: Frontend framework for building UI components
 - TanStack Query (@tanstack/react-query): Manages API data, caching, and synchronization
 - Axios: Handles HTTP requests
 - JSON Server: Provides a mock REST API for development
