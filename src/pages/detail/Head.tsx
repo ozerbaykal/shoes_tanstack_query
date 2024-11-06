@@ -2,11 +2,11 @@ import Badge from "../../components/list/Badge"
 import Price from "../../components/list/Price"
 import { Shoe } from "../../types"
 
-type Props = {
+export type DetailProps = {
     data: Shoe
 }
 
-const Head = ({ data }: Props) => {
+const Head = ({ data }: DetailProps) => {
     let price = data.price;
     if (data.discount) {
         price = data.price * (100 - data.discount) / 100

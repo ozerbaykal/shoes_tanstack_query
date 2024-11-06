@@ -37,7 +37,7 @@ const Detail = () => {
 
             <div className="flex flex-col gap-8">
                 <Head data={data} />
-                <Color />
+                <Color data={data} />
                 <Size />
 
             </div>
