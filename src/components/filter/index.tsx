@@ -20,11 +20,13 @@ const Filter = ({ isOpen, close }: Props) => {
     const [price, setPrice] = useState<string>(params.get("price") || "0")
 
     const handleReset = () => {
+        //stateri ilk haline döndür
         setColor([]);
         setSize([]);
         setGender("");
         setPrice("0")
 
+        //url'deki prametleri sıfırlar
         setParams({})
 
     }
